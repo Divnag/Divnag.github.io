@@ -1,0 +1,463 @@
+﻿.container {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 20vh,700px,500px,20vh;
+}
+
+/*Page Layout*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100px;
+}
+
+#main {
+    grid-column: 1/span 6;
+    display: flex;
+    flex-wrap:wrap;
+    /*height: 700px;*/
+    height:auto;
+    background-color: silver;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-style: oblique;
+}
+
+
+/*First bacgroud image*/
+#main1 {
+    background-image: url('images/pexels-photo-574073.jpeg');
+    background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    min-height: 100%;
+    grid-column: 1/span6;
+}
+
+
+#main > article {
+    flex: 1;
+}
+
+#main > aside {
+    flex: 1;
+}
+
+#main > nav #main > aside {
+    flex: 0 0 20vw;
+    background: silver;
+}
+
+#main > nav {
+    order: -1;
+}
+
+article, nav, aside {
+    padding: 1em;
+}
+
+
+
+footer {
+    grid-column: 1/span 6;
+    background: silver;
+    height: 20vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    font-family: 'segoe ui';
+    overflow-x: scroll;
+}
+
+
+
+/*Hamburger Nav bar*/
+
+.nav {
+    height: 55px;
+    width: 100%;
+    background-color: #4d4d4d;
+    grid-column: span6;
+    position: fixed;
+}
+
+.nav > .nav-header {
+        display: inline;
+ }
+
+.nav > .nav-header > .nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px 10px 10px 10px;
+ }
+
+ .nav > .nav-btn {
+        display: none;
+}
+
+.nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+}
+
+.nav > .nav-links > a {
+            display: inline-block;
+            padding: 13px 10px 13px 10px;
+            text-decoration: none;
+            color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+        display: none;
+}
+
+@media (max-width:600px) {
+ .nav > .nav-btn {
+   display: inline-block;
+   position: absolute;
+   right: 0px;
+    top: 0px;
+    }
+
+
+.nav > .nav-btn > label {
+  display: inline-block;
+   width: 50px;
+   height: 50px;
+   padding: 13px;
+ }
+
+.nav > .nav-btn > label:hover {
+ background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > .nav-btn > label > span {
+  display: block;
+  width: 25px;
+  height: 10px;
+  border-top: 2px solid #eee;
+ }
+
+.nav > .nav-links {
+position: absolute;
+display: block;
+width: 100%;
+background-color: #333;
+height: 0px;
+transition: all 0.3s ease-in;
+overflow-y: hidden;
+top: 50px;
+left: 0px;
+ }
+
+.nav > .nav-links > a {
+display: block;
+width: 100%;
+}
+
+.nav > #nav-check:not(:checked) + .nav-links {
+height: 0px;
+}
+
+.nav > #nav-check:checked + .nav-links {
+height: calc(100vh - 50px);
+overflow-y: auto;
+ }
+}
+
+/* Create the parallax scrolling effect */
+.parallax {
+   
+    
+    height: 500px;
+    /*background-attachment: fixed;*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*text on the first page*/
+h1.name {
+    display: flex;
+    margin-top: 20%;
+    margin-left: 40%;
+    color: firebrick;
+    font-weight: 900;
+    font-style: italic;
+}
+
+h2.devTitle {
+    display: flex;
+    font-weight: 900;
+    color: firebrick;
+    margin-left: 40%;
+    font-style: initial;
+    
+}
+/*profile pic*/
+img.sticky {
+    margin-top:50%;
+    border-radius: 50%;
+    /*position:relative;*/
+    top: 0;
+    width: 200px;
+    
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+
+/*About me */
+
+
+#aboutme p {
+  
+    font-weight: 200;
+    font-size:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+#aboutme h3 {
+    font-size: 3vw;
+    font-size: 4vh;
+}
+
+#aboutme h2 {
+    font-weight: 500;
+    font-size: 4vh;
+    padding-top: 4rem;
+}
+/*skills*/
+aside #skills h1 {
+    font-size: 4vh;
+    padding-top: 4rem;
+}
+
+aside #skills p {
+    display: flex;
+    font-weight: 500;
+    font-size:17px;
+}
+
+/*projects*/
+
+.w3-container-fluid {
+    grid-column: 1/span 6;
+    /*display: grid;*/
+    background-color: beige;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    height: auto;
+}
+
+    .w3-container-fluid h1 {
+       
+        padding-top: 30px;
+        text-align: center;
+    }
+
+ .w3-container-fluid h3, p {
+        
+        text-align: center;
+    }
+.w3-container-fluid #link {
+        font-size:20px;
+        font-weight:300;
+        text-align: center;
+        color:blue;
+    }
+    .w3-container-fluid #project1 {
+        box-sizing: border-box;
+        height: 1300px;
+        
+    }
+    
+    
+
+    /*Filp card on project section*/
+.card {
+    /*width: 1060px;*/
+     width:90vw;
+    height:90vh;
+    border-radius: 20px;
+    height: 490px;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all 0.9s ease-out;
+    -moz-transition: all 0.9s ease-out;
+    transition: all 0.9s ease-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.face:after {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    display: block;
+    height: 22px;
+    width: 100%;
+    background-size: 100%;
+}
+
+.face {
+    border-radius: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 0.9s all ease-in-out;
+    -webkit-transition: 0.9s all ease-in-out;
+    -moz-transition: 0.9s all ease-in-out;
+}
+
+
+
+
+.front {
+    background: url('images/projectScreenshotVirtualPet.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 2;
+   
+}
+
+.back {
+    z-index: 1;
+    background-color: #28255f;
+    transform: rotateY(180deg);
+}
+
+ .back p {
+       
+        font-size: 20px;
+       text-decoration: none;
+        color: white;
+        transition: 0.9s all ease-in-out;
+        -webkit-transition: 0.9s all ease-in-out;
+        -moz-transition: 0.9s all ease-in-out;
+    }
+
+
+
+
+
+.back P:hover {
+            opacity: 0.5;
+  }
+
+.card:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+
+
+/*second card*/
+.front1 {
+    background: url('images/luckynumbg.PNG') center center;
+    background-size: cover;
+    z-index: 2;
+}
+
+.back1 {
+    z-index: 1;
+    background-color: #28255f;
+    transform: rotateY(180deg);
+}
+
+.back1 p {
+          font-size: 20px;
+         text-decoration: none;
+         color: white;
+         transition: 0.9s all ease-in-out;
+        -webkit-transition: 0.9s all ease-in-out;
+        -moz-transition: 0.9s all ease-in-out;
+    }
+
+
+
+
+
+ .back1 P:hover {
+  opacity: 0.5;
+        }
+
+.card:hover .front1 {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back1 {
+    transform: rotateY(0deg);
+}
+
+/*Third card*/
+.front2 {
+    background: url('images/Tuscanybg.png') center center;
+    background-size: cover;
+    z-index: 2;
+    
+}
+
+.back2 {
+    background: url('images/tuscany1.PNG') center center;
+    background-size: cover;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.back2 {
+   
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.9s all ease-in-out;
+    -webkit-transition: 0.9s all ease-in-out;
+    -moz-transition: 0.9s all ease-in-out;
+}
+
+ .back2 P:hover {
+        opacity: 0.5;
+    }
+
+.card:hover .front2 {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back2 {
+    transform: rotateY(0deg);
+}
+
+/*Footer display*/
+a#contact-info:hover {
+    color: cornflowerblue;
+    background-color: navy;
+}
+
+footer h1 {
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+}
